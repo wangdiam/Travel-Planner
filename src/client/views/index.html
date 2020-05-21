@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Travel Planner</title>
+</head>
+
+<body>
+    <div id="parent-container">
+        <div id="content-container">
+            <div id="site-header-container">
+                <div id="site-header">
+                    Travel Planner
+                </div>
+            </div>
+
+            <main id="content-main">
+                <div id="input-container">
+                    <div id="input-fields">
+                        <input id="destination" placeholder="Destination US City Postal Code" type="text">
+                        <input id="start-date" placeholder="DD/MM/YYYY" type="date">
+                        <input id="end-date" placeholder="DD/MM/YYYY" type="date">
+                    </div>
+                    <button class="material-button" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

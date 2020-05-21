@@ -1,0 +1,20 @@
+#site-header {
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-size: xxx-large;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: #FFF;
+}
+
+#site-header-container {
+    text-align: center;
+}
+
+#parent-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

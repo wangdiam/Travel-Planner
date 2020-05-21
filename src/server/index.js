@@ -35,6 +35,14 @@ app.listen(8081, function() {
 
 let tripData = {}
 
+app.get("/test", (req, res) => {
+    fetch(API_LINK + "10005" + API_END)
+        .then(response => response.json())
+        .then(data => {
+            res.send(data);
+        })
+});
+
 app.post("/getData", (req, res) => {
     console.log(req.body);
     POSTAL_CODE = req.body.destination;

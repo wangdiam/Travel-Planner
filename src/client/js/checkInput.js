@@ -1,15 +1,21 @@
 function checkInput(destination, startDate, endDate) {
     console.log("::: Running checkInput :::");
+    const modal = document.getElementById("error-modal");
+    const span = document.getElementsByClassName("close")[0];
     if (isEmptyOrSpaces(destination) || isEmptyOrSpaces(startDate) || isEmptyOrSpaces(endDate)) {
-        const modal = document.getElementById("error-modal");
         console.log("Creating modal");
         modal.style.display = "block";
+        span.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
         return false;
     }
     if (Date.parse(endDate) < Date.parse(startDate)) {
-        const modal = document.getElementById("error-modal");
         console.log("Creating modal");
         modal.style.display = "block";
+        span.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
         return false;
     } else {
         return true;

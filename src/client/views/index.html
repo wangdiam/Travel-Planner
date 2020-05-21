@@ -4,11 +4,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Travel Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="error-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> Please enter valid information!
+        </div>
+    </div>
+
+    </div>
     <div id="parent-container">
-        <div id="content-container">
+        <div id="content-container">å
             <div id="site-header-container">
                 <div id="site-header">
                     Travel Planner
@@ -23,11 +31,34 @@
                         <input id="end-date" placeholder="DD/MM/YYYY" type="date">
                     </div>
                     <button class="material-button" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
+                    <div id="loader-wrapper">
+                        <span class="loader"><span class="loader-inner"></span></span>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
 
 </body>
+
+<div id="trip-data-container">
+    <div id="left-container">
+    </div>
+    <div id="right-container">
+        <div id="trip-header">Default Header</div>
+        <div class="right-container-text" id="days-away-message">Default message</div>
+        <div class="right-container-text" id="trip-date">Default date</div>
+        <div class="right-container-text" id="length-of-trip">Default length</div>
+        <div class="right-container-text" id="weather-information">Default information</div>
+        <button class="material-button" onclick="return Client.scrollToElement(document.getElementById('parent-container'))" onsubmit="return Client.scrollToElement(document.getElementById('parent-container'))">Back To Top</button>
+    </div>
+</div>
+<script>
+    const modal = document.getElementById("error-modal");
+    const span = document.getElementsByClassName("close")[0];
+    span.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+</script>
 
 </html>

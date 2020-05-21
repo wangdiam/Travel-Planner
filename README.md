@@ -11,7 +11,6 @@ A travel planning app that helps you plan your trips. Simply enter the desired t
 5. [Getting Started](#getting-started) 
 6. [Built With](#built-with)
 7. [Test](#test)
-8. [Licence](#licence)
 
 ## About the Project
 
